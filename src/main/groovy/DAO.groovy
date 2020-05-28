@@ -10,25 +10,25 @@ public class User {
 }
 
 public interface UserDao {
-    User save(User user);
-    boolean delete(int id);
-    User get(String email);
+    User save(User user)
+    boolean delete(int id)
+    User get(String email)
 }
 
 public class UserService {
-    private UserDao dao;
+    private UserDao dao
 
     public void setDao(UserDao dao) {
-        this.dao = dao;
+        this.dao = dao
     }
 
     public boolean registerUser(User user) {
-        boolean saved = false;
+        boolean saved = false
         if(dao.get(user.getEmail()) == null) {
-            dao.save(user);
-            saved = true;
+            dao.save(user)
+            saved = true
         }
-        return saved;
+        return saved
     }
 
     // ...

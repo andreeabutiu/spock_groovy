@@ -3,19 +3,26 @@ import spock.lang.*
 class First extends Specification{
 
     def "one plus one should equal two"() {
-        expect: '1+1 = 2'
+        println 'expect 1+1=2'
+        expect:
         1 + 1 == 2
     }
 
     def "two plus two should equal four"() {
+
         given: '2 numbers'
+        println 'given 2 numbers'
+
         int left = 2
         int right = 2
 
         when: 'add the numbers'
+        println 'when add the numbers'
+
         int result = left + right
 
         then: 'result is 4'
+        println 'result is 4'
         result == 4
     }
 
